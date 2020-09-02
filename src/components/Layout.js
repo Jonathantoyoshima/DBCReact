@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/layout.scss";
+import "../styles/components/layout.scss";
 export default (props) => {
-  return <div className={"root"}>{props.children}</div>;
+  return <div className={"__layout"}>{props.children}</div>;
 };

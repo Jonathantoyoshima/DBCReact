@@ -1,9 +1,25 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Login from "./login.js";
+import Dashboard from "./dashboard.js";
+import Dragon from "./dragon.js";
 
 export default () => {
+  const [logged, setLogged] = React.useState(true);
   const handleLogin = (evt) => {
-    console.log(evt);
+    setLogged(evt);
   };
-  return <Login handleLogin={handleLogin} />;
+  return (
+    <Router>
+      <Switch>
+        <Route path='/dragon/:id'>
+          <Dragon />
+        </Route>
+        <Route path='/dashboard' render={() => (logged ? <Dashboard /> : <Redirect to='/' />)} />
+        <Route path='/'>
+          <Login handleLogin={handleLogin} />
+        </Route>
+      </Switch>
+    </Router>
+  );
 };

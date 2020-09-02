@@ -1,3 +1,4 @@
+@import "_colors.scss";
 .box {
   border-radius: 20px;
   min-height: 200px;
@@ -16,15 +17,15 @@
     margin-top: 0;
   }
 
-  > button {
+  > a {
+    text-decoration: none;
     margin-top: 25px;
     padding: 10px;
-  }
-
-  .error {
-    display: flex;
-    justify-content: flex-end;
-    color: red
+    background-color: $color-primary;
+    color: white;
+    font-size: bold;
+    text-align: center;
+    cursor: pointer;
   }
 
   .form {

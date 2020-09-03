@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
-import "../styles/login.scss";
+import "../styles/pages/login.scss";
 
 const validation = { user: "admin", pass: "123" };
 

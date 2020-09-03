@@ -1,0 +1,21 @@
+@import "../_colors.scss";
+
+.ListOfDragons {
+  max-width: 500px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    > p {
+      flex: 1;
+    }
+    .NewDragon {
+      background-color: $color-primary;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
